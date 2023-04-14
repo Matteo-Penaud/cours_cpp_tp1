@@ -15,3 +15,5 @@ Make sure you run the SUBSCRIBER first, then the publisher in an other terminal.
 Screen from MQTTx :
 ![Screen from MQTTx](screens/MQTTX.png "MQTTX Screen")
 
+Screen from the code preview :
+![Working code preview](screens/MQTT_part2.png "Working code preview")
