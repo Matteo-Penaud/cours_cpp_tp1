@@ -1,5 +1,7 @@
 #include "../inc/common.h"
 
+const string S_MESSAGE_CONTENT("Mattéo, depuis c++");
+
 int main() {
   
   mqtt::client client(S_BROKER_ADDRESS, S_CLIENT_ID_PUB);
@@ -10,7 +12,8 @@ int main() {
 
   try {
     client.connect(options);
-    mqtt::message_ptr message_ptr = mqtt::make_message(S_TOPIC, "MMMMM, le caca c'est déclicieux");
+    cout << "Sending the message : " << S_MESSAGE_CONTENT << endl;
+    mqtt::message_ptr message_ptr = mqtt::make_message(S_TOPIC, S_MESSAGE_CONTENT);
     message_ptr->set_qos(0);
     client.publish(message_ptr);
     client.disconnect();
